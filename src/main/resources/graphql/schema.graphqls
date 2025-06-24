@@ -1,0 +1,40 @@
+type PetDTO{
+    id: Int
+    name: String
+    type: String
+    description: String
+    birthDate: String
+    priceAmount: Float
+    priceCurrency: String
+    ownerId: Int
+    dogRating: Int
+    age: Int
+}
+
+type UserDTO{
+    id: Int
+    firstName: String
+    lastName: String
+    email: String
+    budgetAmount: Float
+    budgetCurrency: String
+}
+
+type PurchaseHistoryDTO{
+    id: Int
+    executionDate: String
+    successfulBuyers: Int
+    failedBuyers: Int
+}
+
+type Query{
+    allPets: [PetDTO]
+    allUsers: [UserDTO]
+    purchaseHistoryLogs: [PurchaseHistoryDTO]
+}
+
+type Mutation{
+    createRandomPets: [PetDTO]
+    createRandomUsers: [UserDTO]
+    buyPetForAllUsers: String
+}
